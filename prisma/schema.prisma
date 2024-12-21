@@ -1,0 +1,54 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id          String   @id @default(uuid())
+  email       String   @unique
+  name        String?
+  // Supports multiple roles: user, admin, etc.
+  role        String
+  // ...existing code...
+}
+
+model Organization {
+  id        String   @id @default(uuid())
+  name      String
+  // Users can belong to multiple organizations if needed
+  members   User[]
+  // ...existing code...
+}
+
+model Government {
+  id      String   @id @default(uuid())
+  name    String
+  // Potentially for multiple subdivisions or agencies
+  // ...existing code...
+}
+
+model Product {
+  id        String   @id @default(uuid())
+  name      String
+  category  String
+  // References possible owners (Organization or Government)
+  ownerOrg  Organization? @relation(fields: [ownerOrgId], references: [id])
+  ownerOrgId String?
+  ownerGov  Government?   @relation(fields: [ownerGovId], references: [id])
+  ownerGovId String?
+  // ...existing code...
+}
+
+model Service {
+  id        String   @id @default(uuid())
+  name      String
+  // For generic expansions: AI consulting, hardware design, etc.
+  // ...existing code...
+}
