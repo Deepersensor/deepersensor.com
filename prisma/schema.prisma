@@ -16,6 +16,10 @@ model User {
   name          String?
   role          String
   organizations Organization[] @relation("OrganizationMembers")
+  googleId      String?
+  appleId       String?
+  githubId      String?
+  walletAddress String?
   // ...existing code...
 }
 
