@@ -34,8 +34,8 @@ export default function Home() {
           <p className="text-xl mb-8 max-w-2xl">Leading the future of technology with innovative solutions in AI, robotics, and automation.</p>
           <Image
             className="mx-auto hover:scale-105 transition-transform duration-300"
-            src="/next.svg"
-            alt="Next.js logo"
+            src="/deepersensor.jpg"
+            alt="Deepersensor logo"
             width={240}
             height={80}
             priority
