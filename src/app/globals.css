@@ -25,9 +25,41 @@ body {
 [data-theme="dark"] {
   --background: #0a0a0a;
   --foreground: #ededed;
+  --card-bg: #1a1a1a;
+  --card-text: #ffffff;
 }
 
 [data-theme="light"] {
   --background: #ffffff;
   --foreground: #171717;
+  --card-bg: #ffffff;
+  --card-text: #171717;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(100px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  animation: slideIn 0.6s ease-out forwards;
+}
+
+.slide-in-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-out;
+}
+
+.slide-in-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Add responsive styles */
+@media (max-width: 640px) {
+  .container {
+    padding: 1rem;
+  }
 }
