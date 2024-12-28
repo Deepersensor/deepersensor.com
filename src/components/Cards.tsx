@@ -11,7 +11,7 @@ export default function Cards() {
       {cardData.map((card) => (
         <div
           key={card.title}
-          className="bg-white dark:bg-neutral-800 p-6 rounded-xl shadow-xl transform transition-all hover:scale-105"
+          className="bg-white dark:bg-neutral-800 p-6 rounded-xl shadow-xl transform transition-all hover:scale-105 hover:shadow-2xl"
         >
           <h3 className="text-xl font-semibold">{card.title}</h3>
           <p className="mt-2">{card.desc}</p>

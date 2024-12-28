@@ -4,7 +4,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="p-4 bg-gradient-to-r from-purple-600 to-indigo-500 text-white text-center">
+    <footer className="p-4 bg-gradient-to-r from-purple-600 to-indigo-500 text-white text-center shadow-inner">
       <p>&copy; {new Date().getFullYear()} DeeperSensor. All rights reserved.</p>
     </footer>
   );
