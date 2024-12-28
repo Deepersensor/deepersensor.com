@@ -32,7 +32,7 @@ export default function Cards() {
                      dark:text-white text-gray-800"
         >
           <div className="text-4xl mb-4">{card.icon}</div>
-          <h3 className="text-xl font-semibold mb-2">{card.title}</div>
+          <h3 className="text-xl font-semibold mb-2">{card.title}</h3>
           <p className="text-gray-600 dark:text-gray-300">{card.desc}</p>
           <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-bl-full" />
         </div>
