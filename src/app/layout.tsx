@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Deeper sensor",
-  description: "",
+  description: "Useful opensource AI robots, better world for everyone.",
 };
 
 export default function RootLayout({
